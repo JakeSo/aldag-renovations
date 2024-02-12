@@ -1,0 +1,61 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  background-color: black;
+  margin: 0;
+  font-family: 'Lekton', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+h1,h2,h3 {
+  font-family: 'Protest Strike', sans-serif;
+}
+
+.nav-links {
+  font-size: x-large;
+  padding-right: 5%;
+}
+
+.nav-links a {
+  padding-right: 10%;
+}
+
+#logo {
+  max-width: 8rem;
+  width: 15vw;
+}
+
+
+.header {
+  position: relative;
+  background-image: url('flag.png');
+  background-position: 0 -50px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* width: 100vw; */
+  height: 40vw;
+}
+
+
+
+.header h1 {
+  font-size: 5vw;
+  padding-top: 12%;
+  text-shadow: 0 0 30px black;
+}
+
+.header h4 {
+  font-size: 3vw;
+  margin-top: 3%;
+  text-shadow: 0 0 20px black;
+}
+
+
+section {
+  height: 50vw;
+  max-height: 500px;
+}
