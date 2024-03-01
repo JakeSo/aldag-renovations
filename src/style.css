@@ -10,9 +10,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: white;
 }
+h1 {
+  font-size: clamp(1.5rem, 0.6197rem + 2.8169vw, 4rem);
 
+}
 h1,h2,h3 {
   font-family: 'Protest Strike', sans-serif;
+}
+
+p {
+  margin-bottom: 10px;
 }
 
 .nav-links {
@@ -30,32 +37,56 @@ h1,h2,h3 {
 }
 
 
-.header {
+section {
+  min-height: 40vw;
+  color: white !important;
+}
+
+
+#Header {
   position: relative;
   background-image: url('flag.png');
   background-position: 0 -50px;
   background-repeat: no-repeat;
-  background-size: 100%;
-  /* width: 100vw; */
-  height: 40vw;
+  background-size: cover;
 }
 
 
 
-.header h1 {
+#Header h1 {
   font-size: 5vw;
-  padding-top: 12%;
+  /* padding-top: 12%; */
   text-shadow: 0 0 30px black;
 }
 
-.header h4 {
+#Header h4 {
   font-size: 3vw;
   margin-top: 3%;
   text-shadow: 0 0 20px black;
 }
 
+#Services {
+  background-image: url("./wood.jpg");
+  background-size: cover;
+}
 
-section {
-  height: 50vw;
-  max-height: 500px;
+#service-list {
+  margin: 0 auto;
+  list-style: circle;
+  list-style-position: inside;
+  columns: 2;
+}
+
+#service-list li {
+  font-size: x-large;
+}
+.content {
+  height: 100%;
+  min-height: 40vw;
+  display: flex;
+}
+
+.subheader {
+  text-align: center;
+  margin-bottom: 10px;
 }
