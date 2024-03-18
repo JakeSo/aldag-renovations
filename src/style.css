@@ -2,7 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+html {
+  scroll-padding-top: 20vh;
+}
+
+
 body {
+ 
   background-color: black;
   margin: 0;
   font-family: 'Lekton', sans-serif;
@@ -27,8 +33,29 @@ p {
   padding-right: 5%;
 }
 
-.nav-links a {
-  padding-right: 10%;
+.nav-link {
+  color: #ffff;
+  position: relative;
+}
+
+.nav-link::after {
+  content:'';
+  display:inline-block;
+  width:0;
+  height:1px;
+  background:#ffff;
+  position: absolute;
+  left: 0px;
+  bottom:0px;
+  transition:0.2s ease-in;
+}
+
+
+.nav-link.active::after {
+  width: 100%;
+}
+.nav-link:hover::after {
+  width:100%;
 }
 
 #logo {
@@ -38,17 +65,19 @@ p {
 
 
 section {
-  min-height: 40vw;
+  min-height: 30vw;
   color: white !important;
 }
 
 
 #Header {
+  text-align: center;
   position: relative;
-  background-image: url('flag.png');
+  background-image: url('images/flag.png');
   background-position: 0 -50px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 
@@ -66,8 +95,10 @@ section {
 }
 
 #Services {
-  background-image: url("./wood.jpg");
+  text-shadow: 5px 5px 10px black ;
+  background-image: url("images/wood.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #service-list {
@@ -78,11 +109,13 @@ section {
 }
 
 #service-list li {
-  font-size: x-large;
+  font-size: 3vw;
+  margin-bottom: 10%;
+  font-weight: bold;
 }
 .content {
   height: 100%;
-  min-height: 40vw;
+  min-height: 30vw;
   display: flex;
 }
 
@@ -90,3 +123,15 @@ section {
   text-align: center;
   margin-bottom: 10px;
 }
+
+form input {
+  color: black;
+  padding: 2%;
+  margin-bottom: 10px;
+}
+
+form textarea {
+  color: black;
+  padding: 2%;
+}
+
