@@ -1,36 +1,46 @@
-import { useState } from "react";
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
 
-     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: ''})
+    emailjs.init({
+        publicKey: 'MPClBf74aS5N3-fKY',
+        blockHeadless: true,
+        limitRate: {
+            // Set the limit rate for the application
+            id: 'app',
+            // Allow 1 request per 10s
+            throttle: 10000,
+        },
+    });
 
-    function updateForm(field, value) {
-        setFormData({
-            ...formData,
-            [field]: value
+
+    function sendEmail(e) {
+        e.preventDefault();
+        emailjs.sendForm('service_js6x35h', 'template_pdz3jec', e.target).then(() => { 
+            document.getElementById('sentAlert').classList.toggle('active');
+            setTimeout(() => {
+                document.getElementById('sentAlert').classList.toggle('active');
+            }, 3000);
+
+            
+            return false;
+         }, (error) => {
+            console.error(error);
         });
-     }
+    }
 
-     function sendEmail(e){
-       e.preventDefaul();
-       emailjs.sendForm('SERVICE_ID','contact_form',e.target,'USER_ID').then(() => {}, (error) => {
-
-       });     
-     }
-
-    return (<form id="contact-form w-full" onSubmit={sendEmail}>
+    return (<form id="contact-form" onSubmit={sendEmail}>
         <div className="md:w-1/2 flex flex-col float-start text-left px-10">
             <label>Name:</label>
-            <input id="name" name="name" value={formData.name} onChange={(e) => updateForm('name',e.target.value )}></input>
+            <input id="name" name="name" ></input>
             <label>Phone Number:</label>
-            <input id="phone" name="phone" type="tel" value={formData.phone} onChange={(e) => updateForm('phone',e.target.value )} ></input>
+            <input id="phone" name="phone" type="tel" ></input>
             <label>Email:</label>
-            <input id="email" name="email" type="email" value={formData.email} onChange={(e) => updateForm('email',e.target.value )}></input>
+            <input id="email" name="email" type="email" ></input>
         </div>
         <div className="md:w-1/2 flex flex-col text-left px-10">
             <label>Message:</label>
-            <textarea name="message" rows="10" id="message" value={formData.message} onChange={(e) => updateForm('message',e.target.value )}></textarea>
+            <textarea name="message" rows="10" id="message"></textarea>
         </div>
         <div className="w-full text-center text-lg">
             <button type="submit" className="bg-slate-600 px-10 py-2 mt-10 rounded"> Send </button>

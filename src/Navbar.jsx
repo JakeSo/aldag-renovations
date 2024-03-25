@@ -64,7 +64,7 @@ const Navbar = () => {
             href={`#${link.id}`}
             key={link.label}
             data-link={link.id}
-            className={`nav-link text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${activeSection === `${link.id}` ? 'active' : ''}`}
+            className={`nav-link text-lg sm:text-xl md:text-2xl lg:text-3xl ${activeSection === `${link.id}` ? 'active' : ''}`}
             onClick={() => handleLinkClick(link.id)}
           >
             {link.label}
