@@ -73,6 +73,7 @@ section {
 
 
 #Header {
+  padding: 50px 0;
   text-align: center;
   position: relative;
   background-image: url('images/flag.png');
@@ -104,8 +105,7 @@ section {
 
 #service-list {
   margin: 3% auto;
-  list-style: circle;
-  list-style-position: inside;
+  list-style-type: none;
   columns: 2;
 }
 
@@ -113,6 +113,11 @@ section {
   font-size: 3vw;
   margin-bottom: 15%;
   font-weight: bold;
+}
+
+#service-list li::before {
+  content: '🛠️';
+  margin-right: 10px;
 }
 .content {
   padding: 1.25rem 2.5rem;
@@ -159,4 +164,19 @@ label {
   display: flex;
   z-index: 2;
   opacity: 1;
+}
+
+footer {
+  padding-top: 50px;
+  height: 100px;
+}
+
+.socials {
+  height: 100%;
+  text-align: center;
+  font-size: x-large;
+}
+
+.socials a {
+  margin-right: 10px;
 }

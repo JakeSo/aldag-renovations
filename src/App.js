@@ -1,7 +1,11 @@
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import "./App.css";
 import ContactForm from "./components/ContactForm";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function App() {
+
+  const year = new Date().getFullYear();
+
   return (
     <div className="App mt-28">
       <section id="Header">
@@ -28,8 +32,8 @@ function App() {
           <ul id="service-list" className="text-xl" >
             <li>Repairs</li>
             <li>Plumbing</li>
-            <li>Installations</li>
             <li>Tiling</li>
+            <li>Installations</li> 
             <li>Remodeling</li>
             <li>Painting</li>
           </ul>
@@ -46,6 +50,16 @@ function App() {
           <ContactForm />
         </div>
       </section>
+      <footer>
+        <div className="socials">
+          <a href="https://www.facebook.com/profile.php?id=100067873955989"><FontAwesomeIcon icon={faFacebook} /></a>
+          <a href="https://instagram.com/aldagrenovationsllc"><FontAwesomeIcon icon={faInstagram} /></a>
+        </div>
+        <div className="copyright text-center">
+          <small>Copyright &copy; {year} Aldag Renovations, LLC </small>
+        </div>
+        
+      </footer>
     </div>
   );
 }
