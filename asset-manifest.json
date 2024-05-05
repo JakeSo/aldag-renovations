@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/aldag-renovations/static/css/main.d6b3f58f.css",
+    "main.css": "/aldag-renovations/static/css/main.94dc9e42.css",
     "main.js": "/aldag-renovations/static/js/main.b54b0640.js",
     "static/js/592.593f6dc3.chunk.js": "/aldag-renovations/static/js/592.593f6dc3.chunk.js",
     "static/media/flag.png": "/aldag-renovations/static/media/flag.2a7e34d7e2a32cb992dc.png",
     "static/media/wood.jpg": "/aldag-renovations/static/media/wood.aeb9d538eab89547eb8b.jpg",
     "static/media/logo.jpg": "/aldag-renovations/static/media/logo.8826114490154d3715ac.jpg",
     "index.html": "/aldag-renovations/index.html",
-    "main.d6b3f58f.css.map": "/aldag-renovations/static/css/main.d6b3f58f.css.map",
+    "main.94dc9e42.css.map": "/aldag-renovations/static/css/main.94dc9e42.css.map",
     "main.b54b0640.js.map": "/aldag-renovations/static/js/main.b54b0640.js.map",
     "592.593f6dc3.chunk.js.map": "/aldag-renovations/static/js/592.593f6dc3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6b3f58f.css",
+    "static/css/main.94dc9e42.css",
     "static/js/main.b54b0640.js"
   ]
 }
