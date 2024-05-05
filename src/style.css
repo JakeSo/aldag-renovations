@@ -85,13 +85,13 @@ section {
 
 
 #Header h1 {
-  font-size: 5vw;
+  font-size: clamp(2rem, 0.7778rem + 4.8889vw, 13rem);
   /* padding-top: 12%; */
   text-shadow: 0 0 30px black;
 }
 
 #Header h4 {
-  font-size: 3vw;
+  font-size: clamp(1.5rem, 0.9141rem + 1.875vw, 4.5rem);
   margin-top: 3%;
   text-shadow: 0 0 20px black;
 }
@@ -110,7 +110,7 @@ section {
 }
 
 #service-list li {
-  font-size: 3vw;
+  font-size: clamp(1rem, 0.4444rem + 2.2222vw, 6rem);
   margin-bottom: 15%;
   font-weight: bold;
 }

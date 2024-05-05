@@ -30,7 +30,7 @@ export default function ContactForm() {
     }
 
     return (<form id="contact-form" onSubmit={sendEmail}>
-        <div className="md:w-1/2 flex flex-col float-start text-left px-10">
+        <div className="w-full md:w-1/2 flex flex-col float-start text-left px-10">
             <label>Name:</label>
             <input id="name" name="name" ></input>
             <label>Phone Number:</label>
